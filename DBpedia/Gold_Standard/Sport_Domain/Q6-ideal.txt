@@ -1,0 +1,19 @@
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/champion> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/mostChamps> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/leagues> ?o1.
+}
+} 

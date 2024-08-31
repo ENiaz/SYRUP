@@ -1,0 +1,4 @@
+SELECT (count(DISTINCT ?s1)) where {
+?s1 <http://dbpedia.org/ontology/spouse> ?b.
+?s1 <http://dbpedia.org/ontology/father> ?o.
+ }

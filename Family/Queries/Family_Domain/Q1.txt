@@ -1,0 +1,4 @@
+SELECT (count(DISTINCT ?s1)) where {
+?s1 <http://family.org/brother> ?b.
+?s1 <http://family.org/husband> ?o1.
+ }

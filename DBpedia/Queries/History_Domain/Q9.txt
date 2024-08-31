@@ -1,0 +1,6 @@
+SELECT (count(DISTINCT ?s1)) where {
+?s1 <http://dbpedia.org/property/architecture> ?b.
+?s1 <http://purl.org/dc/terms/subject>  ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/photo> ?o.
+ }

@@ -1,0 +1,19 @@
+SELECT (count(DISTINCT ?s1)) where {
+{?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/finalteam> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/finalleague> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/teams> ?o1.
+}
+} 

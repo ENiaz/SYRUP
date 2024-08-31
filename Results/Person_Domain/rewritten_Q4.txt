@@ -1,0 +1,38 @@
+SELECT (count(DISTINCT ?s1)) where {
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/country> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/countryofbirth> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/citizenship> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/country> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/countryRepresented> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/countryOfOrigin> ?o1.
+}
+} 
+

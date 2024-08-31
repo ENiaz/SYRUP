@@ -1,0 +1,19 @@
+SELECT (count(DISTINCT ?s1)) where {
+{?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/title> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/caption> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/label> ?o.
+}
+} 

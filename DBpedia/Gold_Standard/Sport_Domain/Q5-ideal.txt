@@ -1,0 +1,26 @@
+select distinct ?s1 ?o where {
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/country> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/origins> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/origins> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/country> ?o1.
+}
+} 
+

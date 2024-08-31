@@ -1,0 +1,26 @@
+SELECT (count(DISTINCT ?s1)) where {
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/name> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/alternateNames> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/namedFor> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/buildingName> ?o.
+}
+} 
+

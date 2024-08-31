@@ -1,0 +1,3 @@
+Query File,Variable Name,Value,Execution Time (s)
+query/Q1.txt,callret-0,18378,0.35317468643188477
+query/Q2.txt,callret-0,18378,0.3425936698913574

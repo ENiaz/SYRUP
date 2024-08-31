@@ -1,0 +1,12 @@
+select count(distinct ?x) where {
+{?y dbo:residence ?x.} 
+UNION 
+{?z dbo:city?x. ?y dbo:education ?z.  }
+UNION
+{?z dbo:country ?x. ?y dbo:residence ?z. }
+UNION
+{?z dbo:country?x. ?y dbo:education?z .}
+UNION
+{?w dbo:country?x. ?z dbo:education?w. ?y dbo:spouse ?z. }
+}
+

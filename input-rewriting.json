@@ -1,0 +1,8 @@
+{
+ "KG": "Family",
+  "endpoint": "https://labs.tib.eu/sdm/family_kg/sparql",
+  "prefix": "http://family.org/",
+  "rules_file": "Family_AMIE_Rules.csv",
+  "domain": "Family",
+  "query": "Q1"
+}

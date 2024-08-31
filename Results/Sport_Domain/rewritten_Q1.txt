@@ -1,0 +1,34 @@
+SELECT (count(DISTINCT ?s1)) where {
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/team> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/teamDescriptor> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/teams> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/stadiumName> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/clubs> ?o1.
+}
+
+} 
+
+

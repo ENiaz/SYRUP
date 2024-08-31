@@ -1,0 +1,31 @@
+SELECT (count(DISTINCT ?s1)) where {
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/treatment> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/medication> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/treatment> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/medication> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/eMedicineSubject> ?o .
+}
+} 

@@ -1,0 +1,9 @@
+{
+  "KG": "DBpedia",
+  "endpoint": "https://labs.tib.eu/sdm/dbpedia/sparql",
+  "prefix": "http://dbpedia.org/ontology/",
+  "rules_file": "DBpedia_AMIE_Rules.csv",
+  "domain": "Person",
+  "query": "Q1",
+  "predicateHead": "child"
+}

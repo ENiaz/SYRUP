@@ -1,0 +1,14 @@
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/location> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/architect> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/location> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/architect> ?o1.
+}
+} 
+
